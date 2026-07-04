@@ -1,0 +1,25 @@
+---
+title: "What I Learned Building a Distributed Task Scheduler"
+date: "2025-05-10"
+excerpt: "Notes on retries, idempotency, and why 'just add a retry' is never as simple as it sounds."
+tags: ["Go", "Distributed Systems", "Backend"]
+coverImage: ""
+---
+
+Building a job scheduler for my final year project taught me more about distributed systems than any lecture did. A few things that stuck with me:
+
+## Retries are easy. Idempotent retries are not.
+
+The first version of my scheduler retried failed jobs blindly. It took a very confusing afternoon of double-charged mock invoices before I understood why idempotency keys exist. If a job can have side effects, "just retry it" is a design decision, not a default.
+
+## Heartbeats are a trade-off, not a solved problem
+
+Detecting a dead worker quickly means polling often, which costs resources. Polling rarely means slow failure detection. There's no free lunch here — you're choosing a point on a curve, and the right point depends entirely on what you're scheduling.
+
+## Reading real systems is worth more than reading about them
+
+I got further in an afternoon reading Sidekiq's source than I did in a week of blog posts about "how job queues work." If you want to understand a piece of infrastructure deeply, there is no substitute for reading the code of something that survived production.
+
+## What's next
+
+I'm planning a follow-up post on how I'd redesign the heartbeat mechanism using etcd instead of polling Postgres — stay tuned.
