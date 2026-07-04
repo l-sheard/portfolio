@@ -13,11 +13,29 @@ export const awards: Award[] = [
     date: "2024-08",
   },
   {
-    title: "Four-Time Hackathon Winner",
-    issuer: "Bath Hack & Bath Women in Tech Hackathon",
+    title: "Honourable Mention, Best Overall — Bath Hack 2026",
+    issuer: "Bath Hack",
     date: "2026",
-    description:
-      "Won Bath Hack (2023, 2024, 2026) and Bath Women in Tech Hackathon (2023, 2024), plus one Best Overall honourable mention.",
+  },
+  {
+    title: "Winner, Best Tool for CI/CD — Bath Hack 2024",
+    issuer: "Bath Hack",
+    date: "2024",
+  },
+  {
+    title: "Winner, Best UI/UX Design — Bath Women in Tech Hackathon 2024",
+    issuer: "Bath Women in Tech Hackathon",
+    date: "2024",
+  },
+  {
+    title: "Winner, Tech for Environmental Sustainability — Bath Hack 2023",
+    issuer: "Bath Hack",
+    date: "2023",
+  },
+  {
+    title: "Winner, Tech for Environmental Sustainability — Bath Women in Tech Hackathon 2023",
+    issuer: "Bath Women in Tech Hackathon",
+    date: "2023",
   },
   {
     title: "Top 10 First-Year Computer Science Student",

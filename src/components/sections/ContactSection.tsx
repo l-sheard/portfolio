@@ -1,4 +1,4 @@
-import { Mail, MapPin, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
@@ -7,9 +7,8 @@ import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { site } from "@/data/site";
 
 const links = [
-  { href: `mailto:${site.email}`, label: site.email, icon: Mail },
-  { href: site.social.github, label: "GitHub", icon: GithubIcon },
   { href: site.social.linkedin, label: "LinkedIn", icon: LinkedinIcon },
+  { href: site.social.github, label: "GitHub", icon: GithubIcon },
   { href: site.social.devpost, label: "DevPost", icon: Trophy },
 ];
 
@@ -20,7 +19,7 @@ export function ContactSection() {
         <SectionHeading
           eyebrow="Get in touch"
           title="Let's talk"
-          subtitle="I'm always happy to chat about software, opportunities, or interesting problems. The fastest way to reach me is email."
+          subtitle="I'm always happy to chat about software, opportunities, or interesting problems. The fastest way to reach me is LinkedIn."
         />
         <Card className="max-w-md">
           <ul className="space-y-4">
@@ -37,10 +36,6 @@ export function ContactSection() {
                 </a>
               </li>
             ))}
-            <li className="flex items-center gap-3 text-muted">
-              <MapPin className="size-5 shrink-0" />
-              <span>{site.location}</span>
-            </li>
           </ul>
         </Card>
       </Container>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
@@ -21,9 +21,6 @@ export function Footer() {
           </Link>
           <Link href={site.social.devpost} target="_blank" rel="noreferrer" aria-label="DevPost">
             <Trophy className="size-5 transition-colors hover:text-foreground" />
-          </Link>
-          <Link href={`mailto:${site.email}`} aria-label="Email">
-            <Mail className="size-5 transition-colors hover:text-foreground" />
           </Link>
         </div>
       </Container>
