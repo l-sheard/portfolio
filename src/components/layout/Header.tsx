@@ -10,6 +10,7 @@ import { site } from "@/data/site";
 const navLinks = [
   { href: "/#experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
+  { href: "/academics", label: "Academics" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];

@@ -1,6 +1,7 @@
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Timeline, TimelineItem } from "@/components/ui/Timeline";
+import { Button } from "@/components/ui/Button";
 import { education } from "@/data/education";
 import { formatDateRange } from "@/lib/date";
 
@@ -23,6 +24,11 @@ export function EducationSection() {
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
+              )}
+              {item.institution === "University of Bath" && (
+                <Button href="/academics" variant="secondary" className="mt-4">
+                  View modules
+                </Button>
               )}
             </TimelineItem>
           ))}

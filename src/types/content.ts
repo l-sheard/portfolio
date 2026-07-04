@@ -59,3 +59,35 @@ export type SkillGroup = {
   category: string;
   skills: string[];
 };
+
+export type AssessmentComponent = {
+  label: string;
+  weight: number;
+  mark: number;
+};
+
+export type Module = {
+  code: string;
+  name: string;
+  credits: number;
+  mark: number | null;
+  components?: AssessmentComponent[];
+};
+
+export type AcademicYear = {
+  label: string;
+  stage: string;
+  period: string;
+  average: number | null;
+  contribution: number;
+  modules: Module[];
+};
+
+export type DegreeSummary = {
+  awardName: string;
+  programmeTitle: string;
+  institution: string;
+  degreeClass: string;
+  dateOfAward: string;
+  overallAverage: number;
+};
