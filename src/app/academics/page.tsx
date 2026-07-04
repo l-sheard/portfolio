@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
-import { ModuleCard } from "@/components/sections/ModuleCard";
+import { AcademicYearCard } from "@/components/sections/AcademicYearCard";
 import { academicYears, degreeSummary } from "@/data/academics";
 
 export const metadata: Metadata = {
@@ -41,22 +41,7 @@ export default function AcademicsPage() {
       </Card>
 
       {academicYears.map((year) => (
-        <div key={year.label} className="mb-12">
-          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-            <h3 className="text-lg font-semibold tracking-tight">
-              {year.label} <span className="font-normal text-muted">({year.period})</span>
-            </h3>
-            <p className="text-sm text-muted">
-              Year average {year.average}%
-              {year.contribution > 0 && ` · ${year.contribution}% of final degree`}
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {year.modules.map((module) => (
-              <ModuleCard key={module.code} module={module} />
-            ))}
-          </div>
-        </div>
+        <AcademicYearCard key={year.label} year={year} />
       ))}
     </Container>
   );

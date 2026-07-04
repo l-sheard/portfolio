@@ -2,7 +2,7 @@ import type { Module } from "@/types/content";
 
 export function ModuleCard({ module }: { module: Module }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl border border-surface-border bg-surface p-4 text-center">
+    <div className="flex flex-col gap-3 rounded-2xl border border-surface-border bg-background p-4 text-center">
       <div className="flex min-h-24 flex-col items-center justify-center gap-2">
         <p className="line-clamp-2 text-sm font-medium">{module.name}</p>
         <p className="text-2xl font-bold text-accent">

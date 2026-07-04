@@ -8,34 +8,16 @@ export const awards: Award[] = [
     description: "\"Investigation into the Social Reasoning and Deceptive Abilities of LLM Agents\"",
   },
   {
+    title: "Generation Google Scholarship",
+    issuer: "Google",
+    date: "2023-07",
+    description:
+      "Jul 2023 — Jun 2024. Awarded based on commitment to diversity, equity, and inclusion, demonstrated leadership, and academic performance within Computer Science.",
+  },
+  {
     title: "Azure Fundamentals Certification",
     issuer: "Microsoft Certified",
     date: "2024-08",
-  },
-  {
-    title: "Honourable Mention, Best Overall — Bath Hack 2026",
-    issuer: "Bath Hack",
-    date: "2026",
-  },
-  {
-    title: "Winner, Best Tool for CI/CD — Bath Hack 2024",
-    issuer: "Bath Hack",
-    date: "2024",
-  },
-  {
-    title: "Winner, Best UI/UX Design — Bath Women in Tech Hackathon 2024",
-    issuer: "Bath Women in Tech Hackathon",
-    date: "2024",
-  },
-  {
-    title: "Winner, Tech for Environmental Sustainability — Bath Hack 2023",
-    issuer: "Bath Hack",
-    date: "2023",
-  },
-  {
-    title: "Winner, Tech for Environmental Sustainability — Bath Women in Tech Hackathon 2023",
-    issuer: "Bath Women in Tech Hackathon",
-    date: "2023",
   },
   {
     title: "Top 10 First-Year Computer Science Student",
